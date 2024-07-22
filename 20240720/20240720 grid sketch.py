@@ -26,12 +26,12 @@ def grid(off_x, off_y, cols, rows, gs):
     halfw = w / 2 # heavily used, so why not have a variable for readability
     for j  in range(rows):
         stroke(255, 16) # white stroke with lowered opacity (0-255 range)
-        y = off_y + (j * w) + halfw # sets cell starting point: off_y is the left margin, j moves it down to next row, half w places it in center of cell
+        y = off_y + (j * w) + halfw # sets cell starting point: off_y is the top margin, j moves it down to next row, half w places it in center of cell
         r = random_int(0, 128) # color settings (0-255 range)
         g = random_int(64, 192)
         b = random_int(0, 255)
         for i in range(cols):
-            x = off_x + (i * w) + halfw # sets cell starting point: off_x is the top margin, i moves it across the row, half w places it in center of cell
+            x = off_x + (i * w) + halfw # sets cell starting point: off_x is the left margin, i moves it across the row, half w places it in center of cell
             m = random_int(1, 6) # random choice of grid fill style
             if m < 4: # style 1: small square, upper left or lower right quadrant
                 dr = random_int(0, 1) * halfw # 0 = lower right, 1 = upper left
